@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #4B0082;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.producto-card {
+    background-color: #4B0082;
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 280px;
+    background: linear-gradient(to bottom, #4B0082 0%, #4B0082 85%, #2B0050 100%);
+}
+
+.producto-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: #000;
+    padding: 0.5rem;
+}
+
+.producto-info {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    margin-top: auto;
+    height: 80px;
+    position: relative;
+}
+
+.nombre-producto {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.precio {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+}
+
+.cart-button {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #ffffff;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.agregar-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.agregar-form input {
+    padding: 1rem;
+    border: 2px solid #4B0082;
+    border-radius: 30px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.agregar-form input:focus {
+    border-color: #6a1b9a;
+    box-shadow: 0 0 0 2px rgba(106, 27, 154, 0.2);
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.enviar {
+    background-color: #4B0082;
+    color: white;
+}
+
+.enviar:hover {
+    background-color: #6a1b9a;
+}
+
+.limpiar {
+    background-color: #ffffff;
+    border: 2px solid #4B0082;
+    color: #4B0082;
+}
+
+.limpiar:hover {
+    background-color: #f5f5f5;
+}
+
+footer {
+    background-color: #4B0082;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "agregar"
+            "productos";
+    }
+
+    .agregar-section {
+        grid-area: agregar;
+    }
+
+    .productos-section {
+        grid-area: productos;
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .agregar-form {
+        padding: 1rem;
+    }
+
+    button {
+        padding: 0.8rem 1.5rem;
+        font-size: 10px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+} 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraGeek - Productos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>❤️❤️❤️ AluraGeek</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="productos-section">
+                <h2>MIS PRODUCTOS:</h2>
+                <div id="productos-grid" class="productos-grid">
+                    <!-- Los productos se cargarán dinámicamente aquí -->
+                </div>
+            </div>
+
+            <div class="agregar-section">
+                <h2>AGREGAR PRODUCTO:</h2>
+                <form id="agregar-form" class="agregar-form">
+                    <input type="text" id="nombre" placeholder="nombre..." required>
+                    <input type="number" id="precio" placeholder="precio..." required step="0.01">
+                    <input type="url" id="imagen" placeholder="URL de la imagen..." required>
+                    <div class="form-buttons">
+                        <button type="submit" class="enviar">Enviar</button>
+                        <button type="reset" class="limpiar">Limpiar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>❤️❤️❤️ AluraGeek</p>
+            <p>DESARROLLADO POR KEVIN BERMUDEZ</p>
+            <p>ALURA LATAM - 2024</p>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html> 
